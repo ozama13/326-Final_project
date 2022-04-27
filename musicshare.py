@@ -8,6 +8,17 @@ class User:
     Attributes:
         _type_: _description_
     """
+    
+    def __init__(self, username, password, email):
+        self.username = username
+        self.password = password
+        self.email = email
+        
+    def playlist(self):
+        pass
+    
+    def recomendList(self):
+        pass
 
 class Song:
     """Class for song objects
