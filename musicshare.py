@@ -69,7 +69,14 @@ def main ():
     """
     songReccs = []
 
+
     return songReccs
+
+def makeList(u1, u2):
+    ## return to users 
+    for i in u1.playlist:
+        
+
 
 if __name__ == "__main__":
     pass
