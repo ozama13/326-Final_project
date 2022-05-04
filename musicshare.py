@@ -1,19 +1,5 @@
 #326 Final Project
 #BY Larissa Warthen, Jaclyn Welfeld, Olivia Zama
-"""Accessing Spotify's API using spotipy"""
-import spotipy
-from spotipy.oauth2 import SpotifyOAuth
-
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=66a84e6d0e50420ebe497d5453de9f0b,
-                                               client_secret=1aa483825c284850bbce50957868a21e,
-                                               redirect_uri=http://localhost:9000,
-                                               scope="user-library-read"))
-
-results = sp.current_user_saved_tracks()
-for idx, item in enumerate(results['items']):
-    track = item['track']
-    print(idx, track['artists'][0]['name'], " – ", track['name'])
-
 
 class User:
     """Class for the users getting music reccomendations
