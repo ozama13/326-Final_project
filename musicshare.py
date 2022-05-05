@@ -74,7 +74,13 @@ def main ():
 
 def makeList(u1, u2):
     ## return to users 
-    for i in u1.playlist:
+    reccomendedSongs= []
+    u1.sort
+    u2.sort
+    #if (the genre of u1 == genre of u2):
+    #    reccomended songs += u2 song object
+
+    return reccomendedSongs
         
 
 
