@@ -4,6 +4,17 @@ import user
 import song
 
 def recomender(user, friend):
+    """Creates a playlist of songs that dont already exist in both the user and friends respective
+     playlist-if the song has a genre common to the user
+
+    Args:
+        user (object): represents the current person interacting with program
+        friend (object): user object associated as friend to the current user
+
+    Returns:
+        list: list of new song reccomendations based off genre overlap
+    """
+
     playlist1 = user.playlist
     playlist2 = friend.playlist
     
@@ -26,6 +37,13 @@ def recomender(user, friend):
     return songRecs
             
 def userLogin(username, password):
+    """_summary_
+
+    Args:
+        username (_type_): _description_
+        password (_type_): _description_
+    """
+
     userData = open('user_database.csv','r')
     
     for line in userData:
@@ -33,7 +51,7 @@ def userLogin(username, password):
         
         if username == line[0]:
             if password == line[1]:
-                #acess to user object/ user object is one of focus, get method?
+                #access to user object/ user object is one of focus, get method?
                 pass
             else:
                 print('Incorrect Password')

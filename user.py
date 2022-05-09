@@ -2,7 +2,9 @@ class User:
     """Class for the users getting music reccomendations
 
     Attributes:
-        _type_: _description_
+        username (string): user's spotify username
+        password (string): user's spotify password
+        email (string): user's email connected to spotify 
     """
     
     def __init__(self, username, password, email):
@@ -30,7 +32,9 @@ class User:
         self.playlist.append(music)
     
     def addFriend(self, userProfile):
-        """
+        """Adds a user object to the current user's Friend list
+        Side Effects:
+            Changes the friend list connected to the User Object
         """
         self.friends.append(userProfile)
         

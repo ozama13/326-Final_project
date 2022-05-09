@@ -59,3 +59,22 @@ def clicked():
     res='Hold on, we are generating a shared playlist'+txt.get()
 
 btn= Button(root, text="Submit").grid(row=4, column=0)
+
+
+
+def findFriend(friendUsername):
+    """opens file of user objects and returns the playlist of the corresponding friend
+
+    Args:
+        friendUsername (string): string of the username of friend wanted to add to connect to
+    """
+    user_data = open(r"user_database","a")
+    for line in findFriend:
+        line.split()
+        if friendUsername == line[0]:
+            pass
+
+    user_data.close()
+
+
+

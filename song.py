@@ -20,6 +20,11 @@ class Song:
         
         
     def __repr__(self) -> str:
+        """Displays the song as a title and artists
+
+        Returns:
+            str: string of title with artist of each song 
+        """
         return f"{self.title} by {self.artist}"
 
 
