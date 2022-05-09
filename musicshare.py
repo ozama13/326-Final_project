@@ -2,7 +2,7 @@
 #BY Larissa Warthen, Jaclyn Welfeld, Olivia Zama
 import user
 import song
-import musicShareGUI
+
 
 def recomender(user, friend):
     """Creates a playlist of songs that dont already exist in both the user and friends respective
