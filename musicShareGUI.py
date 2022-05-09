@@ -45,7 +45,7 @@ def signup():
 # Set username entry
 # The Entry widget is a standard Tkinter widget used to enter or display a single line of text.
     
-    username_entry = Entry(signup_screen, textvariable=username)
+    username_entry = Entry.get(signup_screen, textvariable=username)
     username_entry.pack()
    
 # Set password label
@@ -53,7 +53,7 @@ def signup():
     password_lable.pack()
     
 # Set password entry
-    password_entry = Entry(signup_screen, textvariable=password, show='*')
+    password_entry = Entry.get(signup_screen, textvariable=password, show='*')
     password_entry.pack()
 
 #set email label
@@ -61,9 +61,11 @@ def signup():
     email_lable.pack()
 
 #set email entry
-    email_entry = Entry(signup_screen, textvariable=email, show='*')
+    email_entry = Entry.get(signup_screen, textvariable=email, show='*')
     email_entry.pack()
 
+#use variables to call user class
+    user.User(username_entry, password_entry, email_entry)
 
     Label(signup_screen, text="").pack()
     
