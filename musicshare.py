@@ -2,6 +2,7 @@
 #BY Larissa Warthen, Jaclyn Welfeld, Olivia Zama
 import user
 import song
+import musicShareGUI
 
 def recomender(user, friend):
     """Creates a playlist of songs that dont already exist in both the user and friends respective
@@ -14,10 +15,10 @@ def recomender(user, friend):
     Returns:
         list: list of new song reccomendations based off genre overlap
     """
-
     playlist1 = user.playlist
     playlist2 = friend.playlist
     
+    difSongs = []
     userGenres = []
     songRecs = []
     
@@ -37,13 +38,6 @@ def recomender(user, friend):
     return songRecs
             
 def userLogin(username, password):
-    """_summary_
-
-    Args:
-        username (_type_): _description_
-        password (_type_): _description_
-    """
-
     userData = open('user_database.csv','r')
     
     for line in userData:
