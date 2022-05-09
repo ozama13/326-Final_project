@@ -15,18 +15,18 @@ def main_account_screen():
     main_account.geometry('750x250')
 
 #setting up labels for user input
-    Label(text="Login or Signup", bg='papayawhip',width=300, height='2',font=('Arial',14)).pack()
-    Label(text='').pack()
+Label(text="Login or Signup", bg='papayawhip',width=300, height='2',font=('Arial',14)).pack()
+Label(text='').pack()
 
 #creating login button
-    Button(text="Login",height='2', width='30').pack()
+Button(text="Login",height='2', width='30').pack()
 #creating signup button
-    Button(text='Register', height='2',width='30').pack()
+Button(text='Register', height='2',width='30').pack()
 
 #start GUI
-    main_account_screen.mainloop()
+main_account_screen.mainloop()
 #call main_account_screen
-    main_account_screen()
+main_account_screen()
 
 #signup window:
 def signup():
