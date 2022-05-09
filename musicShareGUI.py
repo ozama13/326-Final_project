@@ -8,11 +8,11 @@ import user
 
 def main_account_screen():
     #creating root window
-    mainaccount.root = Tk()   
+    main_account = Tk()   
     #root window title and dimension
-    mainaccount.root.title("Welcome to Music Share!")
+    main_account.title("Welcome to Music Share!")
     #Set geometry (widthxheight)
-    mainaccount.root.geometry('750x250')
+    main_account.geometry('750x250')
 
 #setting up labels for user input
     Label(text="Login or Signup", bg='papayawhip',width=300, height='2',font=('Arial',14)).pack()
@@ -24,7 +24,7 @@ def main_account_screen():
     Button(text='Register', height='2',width='30').pack()
 
 #start GUI
-    main_screen.mainloop()
+    main_screen_account.mainloop()
 #call main_account_screen
     main_account_screen()
 
@@ -45,7 +45,7 @@ def signup():
 # Set username entry
 # The Entry widget is a standard Tkinter widget used to enter or display a single line of text.
     
-    username_entry = Entry.get(signup_screen, textvariable=username)
+    username_entry = Entry(signup_screen, textvariable=username)
     username_entry.pack()
    
 # Set password label
@@ -53,7 +53,7 @@ def signup():
     password_lable.pack()
     
 # Set password entry
-    password_entry = Entry.get(signup_screen, textvariable=password, show='*')
+    password_entry = Entry(signup_screen, textvariable=password, show='*')
     password_entry.pack()
 
 #set email label
@@ -61,11 +61,9 @@ def signup():
     email_lable.pack()
 
 #set email entry
-    email_entry = Entry.get(signup_screen, textvariable=email, show='*')
+    email_entry = Entry(signup_screen, textvariable=email, show='*')
     email_entry.pack()
 
-#use variables to call user class
-    user.User(username_entry, password_entry, email_entry)
 
     Label(signup_screen, text="").pack()
     
