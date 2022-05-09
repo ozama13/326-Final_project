@@ -74,7 +74,7 @@ def signup():
 
 
 #signup button
-    Button(text='Signup', height='2',width='30',command=Signup).pack()
+    Button(text='Signup', height='2',width='30',command=signup_screen).pack()
 
 #simple form to create playlist using user input
 
