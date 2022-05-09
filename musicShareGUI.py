@@ -90,9 +90,9 @@ genre= OptionMenu(main_account, genre_menu,
     'Funk').grid(row=0, column=0)
 artist = Label(main_account, text='Artist Name').grid(row=1, column=0)
 song = Label(main_account, text='Song Title').grid(row=2, column=0)
-a1= Entry.get(main_account).grid(row=0,column=1)
-a2= Entry.get(main_account).grid(row=1,column=1)
-a3= Entry.get(main_account).grid(row=2,column=1)
+a1= Entry.get(main_account).grif(row=0,column=1)
+a2= Entry.get(main_account).grif(row=1,column=1)
+a3= Entry.get(main_account).grif(row=2,column=1)
 
 #after user entry
 
@@ -102,19 +102,7 @@ def clicked():
 
 
 
-def findFriend(friendUsername):
-    """opens file of user objects and returns the playlist of the corresponding friend
 
-    Args:
-        friendUsername (string): string of the username of friend wanted to add to connect to
-    """
-    user_data = open(r"user_database","a")
-    for line in findFriend:
-        line.split()
-        if friendUsername == line[0]:
-            pass
-
-    user_data.close()
 
 
 
