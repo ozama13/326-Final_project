@@ -1,7 +1,9 @@
 #test 
 #import module
 from tkinter import *
-
+import musicshare
+import song
+import user
 
 #creating root window
 root = Tk()
