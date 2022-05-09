@@ -5,10 +5,10 @@ import musicshare
 import song
 import user
 
+#creating root windowo
+main_account = Tk()
 
-def main_account_screen():
-    #creating root window
-    main_account = Tk()   
+def main_account_screen():   
     #root window title and dimension
     main_account.title("Welcome to Music Share!")
     #Set geometry (widthxheight)
@@ -36,6 +36,7 @@ def signup():
 #text variables
     username=StringVar()
     password=StringVar()
+    email=StringVar()
 #labels for signup instructions
     Label(signup_screen, text="Please enter your information below", bg='papayawhip').pack()
     Label(signup_screen, text='').pack()
@@ -71,7 +72,6 @@ def signup():
 # Set signup button
     Button(signup_screen, text="Signup", width=10, height=1, bg="papayawhip").pack()
 
-global main_screen
 
 #signup button
 Button(text='Signup', height='2',width='30',command=Signup).pack()
@@ -80,7 +80,7 @@ Button(text='Signup', height='2',width='30',command=Signup).pack()
 
 playlist_entry = Label(main_account, text="Input your selected songs:")
 genre_menu = StringVar(main_account)
-genre= OptionMenu(root, genre_menu,
+genre= OptionMenu(main_account, genre_menu,
     'Rap',
     'Country',
     'Pop',
