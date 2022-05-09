@@ -17,3 +17,7 @@ class Song:
         self.title = title
         self.artist = artist
         self.genre = genre
+        
+        
+    def __repr__(self) -> str:
+        return f"{self.title} by {self.artist}"

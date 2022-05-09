@@ -16,13 +16,18 @@ class User:
         self.username = username
         self.password = password
         self.email = email
+        self.playlist = []
+        self.friends = []
         
-    def playlist(self):
+    def playlist(self, music):
         """list of User's personal songs aka the playlist of music they already like and listen to
         """
-        pass
+        self.playlist.append(music)
     
-    def recomendList(self):
-        """list of new songs for the user that are reccomended due to their friend's playlist
+    def addFriend(self, userProfile):
         """
-        pass
+        """
+        self.friends.append(userProfile)
+        
+    def __repr__(self) -> str:
+        return f"{self.username}"
