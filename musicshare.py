@@ -25,11 +25,31 @@ def recomender(user, friend):
             
     return songRecs
             
+def userLogin(username, password):
+    userData = open('user_database.csv','r')
+    
+    for line in userData:
+        line.split()
+        
+        if username == line[0]:
+            if password == line[1]:
+                #acess to user object/ user object is one of focus, get method?
+                pass
+            else:
+                print('Incorrect Password')
+        else:
+            print('User Not Found')
+            
+    userData.close()
+                
+    
     
 def main ():
     """
     """
-    pass
+    # prompt user to login or create new user
+    # login -> enter username and password (would require object shit )
+    # create new user -> create username, password. enter email
    
 
 

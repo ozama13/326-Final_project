@@ -19,6 +19,11 @@ class User:
         self.playlist = []
         self.friends = []
         
+        #add new user to the user database
+        userData = open(r"user_database","a")
+        userData.write(f"{self.username}, {self.password}, {self.email}\n")
+        userData.close()
+        
     def playlist(self, music):
         """list of User's personal songs aka the playlist of music they already like and listen to
         """
