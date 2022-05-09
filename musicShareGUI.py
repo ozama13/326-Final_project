@@ -30,7 +30,7 @@ def main_account_screen():
 
 #signup window:
 def signup():
-    signup_screen= Toplevel(main_screen)
+    signup_screen= Toplevel(main_account)
     signup_screen.title('Signup')
     signup_screen.geometry('300x250')
 #text variables
@@ -74,7 +74,7 @@ def signup():
 
 
 #signup button
-Button(text='Signup', height='2',width='30',command=Signup).pack()
+    Button(text='Signup', height='2',width='30',command=Signup).pack()
 
 #simple form to create playlist using user input
 
@@ -98,9 +98,8 @@ a3= Entry(main_account).grif(row=2,column=1)
 #after user entry
 
 def clicked():
-    #res='Hold on, we are generating a shared playlist'+txt.get()
-
-btn= Button(main_account, text="Submit").grid(row=4, column=0)
+    #res='Hold on, we are generating a shared playlist'.txt.get()
+    btn= Button(main_account, text="Submit").grid(row=4, column=0)
 
 
 
