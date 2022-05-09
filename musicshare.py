@@ -3,34 +3,35 @@
 import user
 import song
 
-
-def main ():
-    """Creates song reccomendations for the user 
-
-    Args:
-
+def recomender(user, friend):
+    playlist1 = user.playlist
+    playlist2 = friend.playlist
     
-    Returns:
-        list: list of reccomended songs for the user
-
-    Side Effects:
+    userGenres = []
+    songRecs = []
     
-    """
-    songReccs = []
-
-
-    return songReccs
-
-def makeList(u1, u2):
-    ## return to users 
-    reccomendedSongs= []
-    u1.sort
-    u2.sort
-    #if (the genre of u1 == genre of u2):
-    #    reccomended songs += u2 song object
-
-    return reccomendedSongs
+    #adds all songs that are in friends playlist that are not in user's
+    difSongs = [song for song in playlist2 if song not in playlist1]
+    
+    #gather all of the genres in user's playlist
+    for song in playlist1:
+        userGenres.append(song.genre)
         
+    #if the genre of the friends song is a genre in the user's playlist
+    #it will be added to the recomended songs playlist
+    for song in difSongs:
+        if song.genre in userGenres:
+            songRecs.append(song)
+            
+    return songRecs
+            
+    
+def main ():
+    """
+    """
+    pass
+   
+
 
 
 if __name__ == "__main__":
