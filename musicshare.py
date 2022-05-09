@@ -53,6 +53,20 @@ def userLogin(username, password):
             print('User Not Found')
             
     userData.close()
+    
+def findFriend(friendUsername):
+    """opens file of user objects and returns the playlist of the corresponding friend
+
+    Args:
+        friendUsername (string): string of the username of friend wanted to add to connect to
+    """
+    user_data = open(r"user_database","a")
+    for line in findFriend:
+        line.split()
+        if friendUsername == line[0]:
+            pass
+
+    user_data.close()
                 
     
     
