@@ -6,7 +6,7 @@ import song
 import user
 
 
-def main_account_screen();
+def main_account_screen():
 
 #creating root window
 main_account.root = Tk()   
