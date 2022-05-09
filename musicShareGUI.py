@@ -24,7 +24,7 @@ def main_account_screen():
     Button(text='Register', height='2',width='30').pack()
 
 #start GUI
-    main_screen_account.mainloop()
+    main_account_screen.mainloop()
 #call main_account_screen
     main_account_screen()
 
@@ -39,7 +39,7 @@ def signup():
 #labels for signup instructions
     Label(signup_screen, text="Please enter your information below", bg='papayawhip').pack()
     Label(signup_screen, text='').pack()
-    username_lable = Label(register_screen, text="Username * ")
+    username_lable = Label(signup_screen, text="Username * ")
     username_lable.pack()
  
 # Set username entry
@@ -56,13 +56,14 @@ def signup():
     password_entry = Entry(signup_screen, textvariable=password, show='*')
     password_entry.pack()
 
+#set email entry
+    email_entry = Entry(signup_screen, textvariable=email, show='*')
+    email_entry.pack()
+
 #set email label
     email_lable = Label(signup_screen, text="Email * ")
     email_lable.pack()
 
-#set email entry
-    email_entry = Entry(signup_screen, textvariable=email, show='*')
-    email_entry.pack()
 
 
     Label(signup_screen, text="").pack()
@@ -73,12 +74,12 @@ def signup():
 global main_screen
 
 #signup button
-Button(text='Signup', height='2',width='30',command=Register).pack()
+Button(text='Signup', height='2',width='30',command=Signup).pack()
 
 #simple form to create playlist using user input
 
-playlist_entry = Label(root, text="Input your selected songs:")
-genre_menu = StringVar(root)
+playlist_entry = Label(main_account, text="Input your selected songs:")
+genre_menu = StringVar(main_account)
 genre= OptionMenu(root, genre_menu,
     'Rap',
     'Country',
@@ -88,18 +89,18 @@ genre= OptionMenu(root, genre_menu,
     'Soul',
     'Funk').grid(row=0, column=0)
 genre.pack()
-artist = Label(root, text='Artist Name').grid(row=1, column=0)
-song = Label(root, text='Song Title').grid(row=2, column=0)
-a1= Entry(root).grif(row=0,column=1)
-a2= Entry(root).grif(row=1,column=1)
-a3= Entry(root).grif(row=2,column=1)
+artist = Label(main_account, text='Artist Name').grid(row=1, column=0)
+song = Label(main_account, text='Song Title').grid(row=2, column=0)
+a1= Entry(main_account).grif(row=0,column=1)
+a2= Entry(main_account).grif(row=1,column=1)
+a3= Entry(main_account).grif(row=2,column=1)
 
 #after user entry
 
 def clicked():
-    res='Hold on, we are generating a shared playlist'+txt.get()
+    #res='Hold on, we are generating a shared playlist'+txt.get()
 
-btn= Button(root, text="Submit").grid(row=4, column=0)
+btn= Button(main_account, text="Submit").grid(row=4, column=0)
 
 
 
