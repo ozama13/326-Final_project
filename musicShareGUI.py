@@ -7,27 +7,26 @@ import user
 
 
 def main_account_screen():
-
-#creating root window
-main_account.root = Tk()   
-#root window title and dimension
-main_account.root.title("Welcome to Music Share!")
-#Set geometry (widthxheight)
-main_account.root.geometry('750x250')
+    #creating root window
+    mainaccount.root = Tk()   
+    #root window title and dimension
+    mainaccount.root.title("Welcome to Music Share!")
+    #Set geometry (widthxheight)
+    mainaccount.root.geometry('750x250')
 
 #setting up labels for user input
-Label(text="Login or Signup", bg='papayawhip',width=300, height='2',font=('Arial',14)).pack()
-Label(text='').pack()
+    Label(text="Login or Signup", bg='papayawhip',width=300, height='2',font=('Arial',14)).pack()
+    Label(text='').pack()
 
 #creating login button
-Button(text="Login",height='2', width='30').pack()
+    Button(text="Login",height='2', width='30').pack()
 #creating signup button
-Button(text='Register', height='2',width='30').pack()
+    Button(text='Register', height='2',width='30').pack()
 
 #start GUI
-main_screen.mainloop()
+    main_screen.mainloop()
 #call main_account_screen
-main_account_screen()
+    main_account_screen()
 
 #signup window:
 def signup():
@@ -35,12 +34,12 @@ def signup():
     signup_screen.title('Signup')
     signup_screen.geometry('300x250')
 #text variables
-username=StringVar()
-password=StringVar()
+    username=StringVar()
+    password=StringVar()
 #labels for signup instructions
-Label(signup_screen, text="Please enter your information below", bg='papayawhip').pack()
-Label(signup_screen, text='').pack()
-username_lable = Label(register_screen, text="Username * ")
+    Label(signup_screen, text="Please enter your information below", bg='papayawhip').pack()
+    Label(signup_screen, text='').pack()
+    username_lable = Label(register_screen, text="Username * ")
     username_lable.pack()
  
 # Set username entry
