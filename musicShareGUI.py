@@ -88,7 +88,6 @@ genre= OptionMenu(main_account, genre_menu,
     'Rock',
     'Soul',
     'Funk').grid(row=0, column=0)
-genre.pack()
 artist = Label(main_account, text='Artist Name').grid(row=1, column=0)
 song = Label(main_account, text='Song Title').grid(row=2, column=0)
 a1= Entry(main_account).grif(row=0,column=1)
