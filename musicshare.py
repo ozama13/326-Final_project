@@ -45,7 +45,7 @@ def userLogin(username, password):
         
         if username == line[0]:
             if password == line[1]:
-                #acess to user object/ user object is one of focus, get method?
+                #access to user object/ user object is one of focus, get method?
                 pass
             else:
                 print('Incorrect Password')
