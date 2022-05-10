@@ -23,10 +23,10 @@ Button(text="Login",height='2', width='30').pack()
 #creating signup button
 Button(text='Register', height='2',width='30').pack()
 
-#start GUI
-main_account_screen.mainloop()
-#call main_account_screen
-main_account_screen()
+# #start GUI
+# main_account_screen.mainloop()
+# #call main_account_screen
+# main_account_screen()
 
 #signup window:
 def signup():
@@ -102,7 +102,10 @@ def clicked():
 
 
 
-
+#start GUI
+main_account_screen.mainloop()
+#call main_account_screen
+main_account_screen()
 
 
 
